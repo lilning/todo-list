@@ -1,0 +1,138 @@
+/* remove default padding, margin, box-sizing rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set body styles */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  background-color: #bdd5ea;
+  color: #fe5f55;
+  font-family: 'Gluten', sans-serif;
+}
+
+header,
+section {
+  min-height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  font-size: 2rem;
+}
+
+section input {
+  padding: 0.7rem;
+  font-size: 2rem;
+  border: 0.25rem solid #fe5f55;
+  border-radius: 0.5rem;
+  background-color: #f7f7ff;
+  color: #495867;
+  font-family: 'Gluten', sans-serif;
+}
+
+button {
+  justify-self: center;
+  align-self: center;
+  border: 0.25rem solid #fe5f55;
+  color: #fe5f55;
+  background-color: #f7f7ff;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin: 0.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  color: #fe5f55;
+  background-color: #577399;
+  border-color: #fe5f55;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  color: #495867;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #f7f7ff;
+  font-size: 1rem;
+  font-family: 'Gluten', sans-serif;
+  background-color: #fe5f55;
+  border-radius: 00.5rem;
+  width: 15rem;
+  cursor: pointer;
+  padding: 1rem 1rem;
+  display: block;
+}
+
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  background: #495867;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  color: #f7f7ff;
+  background-color: #495867;
+}
+
+span {
+  display: inline-block;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* all your styles for dark mode here */
+}
